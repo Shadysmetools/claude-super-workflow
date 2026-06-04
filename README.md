@@ -8,6 +8,10 @@
   <em>⭐ If this saves you from herding a dozen one-off subagents, drop a star.</em>
 </p>
 
+<p align="center">
+  <b>🚀 New here? → <a href="docs/QUICKSTART.md">60-Second Quick Start</a></b>
+</p>
+
 ---
 
 ## Why this exists
