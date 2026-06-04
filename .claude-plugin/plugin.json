@@ -1,0 +1,11 @@
+{
+  "name": "super-workflow",
+  "version": "1.0.0",
+  "description": "A 13-role AI engineering team for Claude Code, led by a tech-lead that orchestrates the crew, routes work into bug/feature pipelines, and ships end-to-end. Shared blackboard, session memory, token-baton handoff, and voice dictation.",
+  "author": {
+    "name": "Shady (@Shadysmetools)"
+  },
+  "homepage": "https://github.com/Shadysmetools/claude-super-workflow",
+  "keywords": ["orchestration", "multi-agent", "workflow", "agents", "claude-code", "rag"],
+  "license": "MIT"
+}

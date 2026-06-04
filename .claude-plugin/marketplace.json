@@ -1,0 +1,20 @@
+{
+  "name": "claude-super-workflow",
+  "owner": {
+    "name": "Shady (@Shadysmetools)"
+  },
+  "metadata": {
+    "description": "A 13-role AI engineering team for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "super-workflow",
+      "source": "./",
+      "description": "13-role AI team led by a tech-lead with orchestration authority: shared blackboard, knowledge-graph + RAG recall, token-baton handoff, bug (production-direct) and feature (staging-first) pipelines, and voice dictation.",
+      "version": "1.0.0",
+      "author": { "name": "Shady (@Shadysmetools)" },
+      "keywords": ["orchestration", "multi-agent", "workflow", "claude-code"],
+      "category": "productivity"
+    }
+  ]
+}
