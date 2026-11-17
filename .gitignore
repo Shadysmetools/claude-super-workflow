@@ -5,8 +5,8 @@
 *.key
 
 # Runtime artifacts
-TEAM-BOARD.md
-HANDOFF.md
+/TEAM-BOARD.md
+/HANDOFF.md
 graphify-out/
 __pycache__/
 *.pyc
@@ -17,3 +17,5 @@ Thumbs.db
 .vscode/
 .idea/
 nul
+/HANDOFF-*.md
+playwright-auth/

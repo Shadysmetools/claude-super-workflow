@@ -1,30 +1,24 @@
 #!/usr/bin/env node
 /**
- * PreCompact hook — fires right before the conversation is compacted.
- * Reminds the tech-lead to persist state so nothing is lost across the compaction.
- *
- * Always emits valid JSON on stdout.
+ * PreCompact hook for super-workflow.
+ * Fires right before context compaction — the natural moment to preserve a baton.
+ * Best-effort reminder so work isn't lost across the compaction boundary.
  */
-'use strict';
-
-function emit(additionalContext) {
-  const payload = {
-    hookSpecificOutput: {
-      hookEventName: 'PreCompact',
-      additionalContext: additionalContext || '',
-    },
-  };
-  process.stdout.write(JSON.stringify(payload));
-}
-
+const fs = require("fs");
 try {
-  const msg = [
-    'PRE-COMPACT: the conversation is about to be compacted.',
-    'Tech-lead — before context is squeezed:',
-    '- Ensure the latest decisions, open work, and next steps are written to TEAM-BOARD.md.',
-    '- Consider running `/super-workflow:handoff` to capture the token-baton so nothing is lost.',
-  ].join('\n');
-  emit(msg);
-} catch (_) {
-  emit('');
+  // drain stdin (payload unused but must be consumed)
+  try { fs.readFileSync(0, "utf8"); } catch {}
+  process.stdout.write(
+    JSON.stringify({
+      hookSpecificOutput: {
+        hookEventName: "PreCompact",
+        additionalContext:
+          "[super-workflow] Compaction imminent. Tech-lead: ensure the latest decisions, " +
+          "open work, and next steps are on TEAM-BOARD.md (and cross-session memory, if installed); consider " +
+          "/super-workflow:handoff so nothing is lost.",
+      },
+    })
+  );
+} catch {
+  process.stdout.write("{}");
 }

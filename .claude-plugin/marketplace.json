@@ -10,10 +10,10 @@
     {
       "name": "super-workflow",
       "source": "./",
-      "description": "13-role AI team led by a tech-lead with orchestration authority: shared blackboard, knowledge-graph + RAG recall, token-baton handoff, bug (production-direct) and feature (staging-first) pipelines, and voice dictation.",
-      "version": "1.0.0",
+      "description": "13-role AI team led by a tech-lead with orchestration authority: project-aware boot, shared blackboard, knowledge-graph + RAG recall, resume-first token-baton handoff, self-pacing loop engine, bug (production-direct) and feature (staging-first) pipelines, and voice dictation.",
+      "version": "1.2.0",
       "author": { "name": "Shady (@Shadysmetools)" },
-      "keywords": ["orchestration", "multi-agent", "workflow", "claude-code"],
+      "keywords": ["orchestration", "multi-agent", "workflow", "claude-code", "loop"],
       "category": "productivity"
     }
   ]

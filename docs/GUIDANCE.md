@@ -13,13 +13,15 @@ claude plugin install super-workflow@claude-super-workflow
 
 ## 2. Make it yours (5 minutes)
 
-1. **`context/VISION.md`** — replace the template with your product thesis. This
-   loads at token-zero so every agent shares the goal.
-2. **`skills/bug-pipeline/SKILL.md`** & **`skills/feature-pipeline/SKILL.md`** —
-   replace the placeholders: `origin/main`, `<your-staging-branch>`, `$DEPLOY_HOST`,
-   and which review tools you run (code-review bot / diff-analysis / security review).
-3. **`agents/*.md`** — tweak the role prompts to match your stack (framework,
-   database, hosting).
+1. **`.superworkflow.json`** — copy `.superworkflow.example.json` from the plugin into
+   your project root and fill in your branch names, staging/production URLs, review tools,
+   human gates, tracker, and a `rulesFile`. The SessionStart hook finds it (walking up from
+   the session folder) and injects a short summary every session; no config = generic mode.
+2. **Project context** — list your own docs (vision, codebase map, runbook) under
+   `contextFiles`; they are injected verbatim at token-zero. Alternatively edit the plugin's
+   `context/VISION.md` and delete its `superworkflow:template` marker line.
+3. **`agents/*.md`** — tweak the role prompts to match your stack (framework, database,
+   hosting) if the defaults aren't enough.
 4. **`context/CURRENT-SAAS.md`** — seed your competitors, or run `/super-workflow:saas-refresh`.
 5. Apply the [recommended settings](./SETTINGS.md) (verbose, max reasoning, token gauge).
 
@@ -44,7 +46,10 @@ The tech-lead will:
 
 - **`update me`** any time → terse caveman status, ~75% fewer tokens.
 - Watch the **status-line token gauge**; when it nears the threshold, run
-  **`/super-workflow:handoff`** and start a fresh session that resumes warm.
+  **`/super-workflow:handoff`** and start a fresh session — `/super-workflow` resumes the
+  baton automatically.
+- Too big for one session? **`/loop /super-workflow:loop <mission>`** ships one bounded
+  slice per firing, rewrites the baton, and parks anything that needs a human.
 - After a role learns something reusable, append a dated bullet to
   **`context/SKILL-DELTAS.md`** — it becomes standing context next session.
 - Keep **`TEAM-BOARD.md`** as the single source of truth; every role reads it

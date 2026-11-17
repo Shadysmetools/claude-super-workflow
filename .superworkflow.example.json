@@ -1,0 +1,35 @@
+{
+  "$comment": "Copy to your project root as .superworkflow.json. Every field is optional; delete what you don't use.",
+  "name": "My App",
+  "replyLanguage": "English",
+  "branches": {
+    "production": "main",
+    "staging": "staging",
+    "featurePrefix": "feat/",
+    "bugPrefix": "fix/"
+  },
+  "environments": {
+    "staging": "https://staging.example.com",
+    "production": "https://app.example.com"
+  },
+  "gates": {
+    "codeReview": "your code-review bot (e.g. a PR review app)",
+    "diffAnalysis": "your diff-analysis tool",
+    "securityReview": "/security-review"
+  },
+  "humanGates": [
+    "merge or promote to production",
+    "pricing / billing",
+    "new top-level route or navigation",
+    "brand, design system or launch copy",
+    "new external integration",
+    "destructive data or schema operations"
+  ],
+  "approver": "the repo owner",
+  "tracker": "GitHub Issues",
+  "rulesFile": ".claude/rules/team-operating-model.md",
+  "contextFiles": [
+    "docs/VISION.md",
+    "docs/architecture/CODEBASE-MAP.md"
+  ]
+}

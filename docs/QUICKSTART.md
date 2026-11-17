@@ -40,7 +40,8 @@ That's it. No config required to start — sensible defaults work out of the box
 
 - 🧠 **Max reasoning + token gauge:** copy the snippet in [SETTINGS.md](./SETTINGS.md).
 - 🎙️ **Talk instead of type:** [voice dictation](../scripts/voice/README.md) — tap a key, speak any language, get clean text.
-- 🎯 **Make it yours:** drop your product thesis into `context/VISION.md` so every agent shares your goal.
+- 🎯 **Make it yours:** copy `.superworkflow.example.json` to your project root as `.superworkflow.json` (branches, URLs, review tools, human gates, context files) so every agent boots knowing your project.
+- 🔁 **Hands-off missions:** `/loop /super-workflow:loop feature "<epic>"` ships one slice per firing and parks what needs you.
 
 ---
 

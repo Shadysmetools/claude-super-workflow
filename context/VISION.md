@@ -1,3 +1,5 @@
+<!-- superworkflow:template -->
+<!-- Delete the line above once you replace this template with real content: the SessionStart hook skips files that still carry it. -->
 # VISION
 
 > **Replace this with YOUR product thesis** — it loads at token-zero on every

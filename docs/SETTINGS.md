@@ -44,7 +44,7 @@ sane auto-compact window. All of these live in your **`~/.claude/settings.json`*
 | `verbose: true` | Shows full tool output — you see exactly what every role did. |
 | `effortLevel: "xhigh"` | **Max reasoning** — deepest planning. The top of `low/medium/high/xhigh`. |
 | `alwaysThinkingEnabled: true` | Extended thinking on for every turn. |
-| `statusLine` | Live status: `⚡ model ▸ folder \| ~Nk tok (P% of 256k) \| $cost`. |
+| `statusLine` | Live status: `⚡ model ▸ folder \| ctx:[bar]% \| 256k:[bar] \| 5h:[bar]% \| 7d:[bar]% \| $cost \| duration` — real context-window and plan-usage gauges from Claude Code. Optional: set `SUPERWF_EXPECTED_ACCOUNT` to show a wrong-account warning. |
 | `autoCompactEnabled` / `autoCompactWindow` | The token-limit window before auto-compaction. |
 | `permissions.defaultMode` | `bypassPermissions` = no prompts (optional, trust-dependent). |
 

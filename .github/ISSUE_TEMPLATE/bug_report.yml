@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in the plugin (agent, skill, command, hook, status line) behaves wrongly.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please strip any private project details, URLs, keys or emails from logs before pasting.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you ran, what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. /super-workflow bug "..."
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - tech-lead / routing
+        - bug-pipeline or feature-pipeline
+        - loop or handoff
+        - a specialist agent
+        - hooks (session-start, prompt-hook, precompact)
+        - status line
+        - voice dictation
+        - docs
+        - other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: Output of `claude --version` and the plugin version (from /plugin).
+      placeholder: "Claude Code 2.x, super-workflow 1.2.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "macOS 15 / Ubuntu 24.04 / Windows 11"
