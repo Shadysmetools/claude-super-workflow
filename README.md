@@ -221,3 +221,7 @@ PRs welcome: new roles, new pipelines, better recall wiring, non-Windows voice l
 ---
 
 <p align="center"><sub>Built with Claude Code. If it helped, a ⭐ goes a long way.</sub></p>
+
+---
+
+**Built by [Shady Al-Halawani](https://github.com/Shadysmetools)**, AI Product Manager & Tech Lead · [LinkedIn](https://www.linkedin.com/in/shady-al-halawani-333a5419a) · [Book a call](https://calendly.com/shady-al-halawani)
